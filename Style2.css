@@ -1,0 +1,262 @@
+body {  
+    background: linear-gradient(to right, grey, brown);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    
+}
+/*HEADER*/
+#header {
+    background-color: rgba(178, 190, 181, .9);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 2px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#header > #navigator {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#header > #navigator > li {
+    margin: 1em 1em;
+}
+#header > #navigator > li > a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    transition-duration: .7s;
+}
+#header > #navigator > li > a.shop,
+#header > #navigator > li > a:hover {
+    color: red;
+    
+}
+#header > #navigator > li > a.shop::after {
+    content: " ";
+    display: block;
+    background: black;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+}
+#header > #navigator > li > a:hover::after {
+    content: " ";
+    display: block;
+    background: black;
+    position: absolute;
+    height: 3px;
+    width: 30px;    
+}
+
+#header > .buttons {
+    display: none;
+}
+
+/*HERO*/
+#page-header {
+    font-weight: bolder;
+    margin: 0;
+    width: 100%;
+    height: 20vh;
+    background-image: url(/Index2/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0 right 80%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page-header > h1, 
+#page-header > p {
+    color: white;
+}
+
+/*PRODUCT*/
+#product {
+    margin: 120px auto;
+    padding: 0 1em;
+    width: 1440;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 10px 40px;
+}
+#product > h1,
+#product > p{
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+#product > .item {
+    width: 20em;
+    height: 30em;
+    margin: 5px;
+    padding: 15px 5px 10px 10px;
+    border-radius: 5px;
+    border: 2px solid brown;
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+}
+#product > .item:hover {
+    box-shadow: 2px 2px 2px pink, -2px -2px 1px pink;
+}
+#product > .item > img {
+    width: 18em;
+    height: 20em;
+    margin: 0px 0px 5px 0px;
+    border-radius: 7px;
+}
+#product > .item > span {
+    color: darkgray;
+    font-size: 14px;
+    margin-top: 2px;
+} 
+#product > .item > .name {
+    font-size: 15px;
+    margin: 5px 0;
+} 
+#product > .item > .ratings {
+    color: yellow;
+    font-weight: 700;
+}
+#product > .item > .price {
+    color: green;
+}
+#product > .item > .favorite {
+    font-size: 17px;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+#product > .item > .favorite:hover {
+    color: aqua;
+}
+
+/*PAGE*/
+#page-navigation {
+    text-align: center;
+}
+#page-navigation > a {
+    width: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: green;
+    padding: 4px 8px;
+
+}
+
+#page-navigation > a > i {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/*PRODUCT INFO*/
+#prod-info {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px 100px;
+}
+
+
+
+#prod-info > .others {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px 3px;
+    
+}
+#prod-info > .others > .main-product {
+    width: 100%; 
+    height: 40vh;
+}
+
+#prod-info > .others > img {
+    width: 17%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#prod-info > .info {
+    width: 40%;
+    height: auto
+}
+#prod-info > .info > h5 {
+    font-weight: bold;
+}
+#prod-info > .info > .name {
+    font-weight: bold;
+    margin: 20px 0px;
+}
+#prod-info > .info > .price {
+    font-weight: bold;
+    font-size: 20px;
+}
+#prod-info > .info > input {
+    width: 70px;
+}
+#prod-info > .info > div > span {
+    background-color: white;
+    padding: 5px 10px;
+}
+#prod-info > .info > select {
+    margin-bottom: .5em;
+}
+#prod-info > .info > div > button {
+    background-color: green;
+    padding: 0 15px;
+    color: white;
+    border: none;
+    outline: 1px solid white;
+    height: 24px;
+}
+#prod-info > .info > div > button:hover {
+    background-color: yellowgreen;
+    color: black;
+    font-weight: 600;
+}
+#prod-info > .info > div > input {
+    width: 2.7em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

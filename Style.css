@@ -1,0 +1,727 @@
+body {  
+    background: linear-gradient(to right, grey, brown);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+p {
+    font-family: Arial;
+    color: darkgray;
+}
+ul {
+    list-style: none
+}
+
+
+/*HEADER*/
+#header {
+    background-color: rgba(178, 190, 181, .9);
+    padding: 8px 40px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+/*HEADER*/
+#header > .buttons {
+    display: none;
+    font-size: 15px;
+}
+
+#navigator {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#navigator > li {
+    padding: 0px 20px;    /*0-top/bottom, 20px-right/left*/
+    
+}
+#navigator > li > a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    
+    transform: color;
+    transition-duration: .8s;
+}
+#navigator > li > a.home,
+#navigator > li > a:hover{
+    color: red;
+}
+#navigator > li > a.home::after {
+    content: " ";
+    display: block;
+    background: black;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+}
+#navigator > li > a:hover::after{
+    color: red;
+    content: " ";
+    display: block;
+    background: black;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+}
+
+
+/*HOMEPAGE*/
+#hero{
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-left: 150px;
+    background-image: url(rin.jpg);
+    background-size: cover;
+    background-position: right 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+}
+#hero > div > h3 {
+    color: aqua;
+}
+#hero > div > h2 {
+    font-size: 40px;
+    color: brown;
+    margin: 0;
+}
+#hero > div > h4 {
+    font-family: "Lucida Handwriting";
+    color: forestgreen;   
+}
+.button {
+    background-image: url(Button.jpg);
+    background-color: transparent;
+    border: 0;
+
+    color: purple;
+    
+}
+
+
+/*FEATURES*/
+#features{
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+#features > div {
+    color: white;
+    border: 2px solid aqua;
+    box-shadow: 1px 1px 3px aqua;
+    border-radius: 10px;
+    height: 200px;
+    padding: 5px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transform: box-shadow;
+    transition-delay: .1s;
+}
+#features > div:hover {
+    box-shadow: 3px 3px 3px aqua, 1px 1px 5px aqua;
+}
+#features > div > div {
+    width: 100px;
+    border-radius: 10px;
+}
+#features > div > img {
+    margin: 5px 20px 20px 20px;
+}
+.Shipping {
+    background-color: fuchsia;
+}
+.Order {
+    background-color: forestgreen;
+}
+.Money {
+    background-color: firebrick;
+}
+.Promotion{
+    background-color: dodgerblue;
+}
+.Sell {
+    background-color: darkturquoise;
+}
+.Service {
+    background-color: darksalmon;
+}
+
+/*PRODUCT*/
+#product {
+    margin: 60px 15px;
+    padding: 10px;
+}
+#product > h1 {
+    text-align: center;
+}
+#product > p {
+    text-align: center;
+}
+#product > .container {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#product > .container::after {
+   content: none !important;
+}
+#product > .container::before {
+   content: none !important;
+}
+#product > .container > .item {       /*Item*/
+    border: 2px solid red;
+    box-shadow: 1px 1px 1px brown;
+    border-radius: 10px;
+    height: auto;
+    width: 250px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 3px 3px 2px brown;
+    position: relative;
+}
+#product > .container > .item:hover {
+    box-shadow: 3px 3px 3px red;
+}
+#product > .container > .item > img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px
+}
+#product > .container > .item > .name{
+    margin-top: 5px;
+    font-size: 15px;
+}
+#product > .container > .item > .brand {
+    color: darkgray;
+    font-size: 14px;
+    margin-top: 2px;
+}
+#product > .container > .item > .ratings {
+    font-size: 15px;
+    color: yellow;
+}
+#product > .container > .item > .price {
+    font-size: 15px;
+    color: darkgreen;
+}
+#product > .container > .item > a {
+    text-align: end;
+    color: darkgray;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+#product > .container > .item > a:hover {
+    color: aqua;
+}
+
+/*BANNER*/
+#banner {
+    background-image: url(banner.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 50px 0;
+    width: 100%;
+    height: 40%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#banner > h4 {
+    color: white;
+    line-height: 5px; 
+    font-size: 15px;
+    margin-top: 20px;
+}
+#banner > h2 {
+    color: white;
+    line-height: 10px;
+    font-size: 35px;
+}
+#banner > h2 > span {
+    color: red;
+}
+#banner > button {
+    background-color: aqua;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    
+    font-size: 13px;
+    font-weight: 500;
+    margin: 40px 0;
+    padding: 10px;
+    
+    border: none;
+    outline: none;
+    transition: .3s;
+}
+#banner > button:hover {
+    background-color: green;
+    color: black;
+}
+
+
+/*BANNERS*/
+#banners {
+    color: white;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 40px 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px 10px;
+}
+#banners > .row1 {
+    border: 1px solid red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px;
+    margin: 2px;
+    height: 50vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#banners > .banner-1 {
+    background-image: url(dress.jpg);
+    grid-row: 1;
+    grid-column: 1/4;
+}
+#banners > .banner-2 {
+    background-image: url(cloth.jpg);
+    grid-row: 1;
+    grid-column: 4/7;
+}
+#banners > div > button {
+    padding: 3px;
+    width: 20%;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+#banners > div > button:hover {
+    color: black;
+    background: green;
+}
+#banners > .row2 {
+    border: 1px solid red;
+    background-image: url();
+    background-size: cover;
+    padding: 5px;
+    margin: 2px;
+    height: 25vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#banners > .row2 > h4 {
+    color: red;
+}
+#banners > .banner-3 {
+    background-image: url(seasonal3.jpg);
+    grid-row: 2;
+    grid-column: 1/3;
+}
+#banners > .banner-4 {
+    background-image: url(onepiece2.jpg);
+    grid-row: 2;
+    grid-column: 3/5
+}
+#banners > .banner-5 {
+    background-image: url(T-shirt2.jpg);
+    grid-row: 2;
+    grid-column: 5/7
+}
+#banners > div:hover {
+    box-shadow: 2px 2px 2px 1px pink, -1px -1px 2px pink;
+    cursor: pointer;
+}
+
+/*NEWS LETTER*/
+#newsletter {
+    background-image: url(banner3.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 25%;
+    padding: 30px;
+    position: relative;
+}
+#newsletter > h2 {
+    margin-top: 40px;
+    font-weight: 700;
+    color: green;
+}
+#newsletter > p {
+    color: black;
+    font-weight: 600;
+}
+#newsletter > p > span {
+    color: fuchsia;
+}
+#newsletter > .sign-up {
+    font-size: 20px;
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+}
+#newsletter > .sign-up > input {
+    width: 300px;
+    white-space: pre-line;
+}
+#newsletter > .sign-up > button {
+    color: white;
+    background-color: aqua;
+    border-radius:0 10px 10px 0;    /*t-left,t-right,b-right,b-left*/
+}
+#newsletter > .sign-up > button:hover {
+    color: black;
+    background-color: green;
+}
+
+/*FOOTER*/
+#footer {
+    text-decoration: none;
+    margin: 40px 10px 5px 40px;
+    padding: 10px 20px 5px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#footer > .contact > span {
+    font-size: 14px;
+    line-height: 35px;
+}
+#footer > .contact > span > i{
+    margin: 2px;  
+}
+#footer > .contact > span > i:hover {
+    font-size: 20px;
+    color: white;
+}
+#footer > .about {
+    display: flex;
+    flex-direction: column;
+}
+#footer > .about > h4 {
+    color: rgb(51, 51, 51);
+    margin: 10px 5px;
+}
+#footer > .about > a{
+    color: rgb(51, 51, 51);
+    margin: 5px;
+    text-decoration: none;
+}
+#footer > .about > a:hover {
+    color: black;
+    font-weight: 500;
+}
+#footer > .account {
+    display: flex;
+    flex-direction: column;
+    
+}
+#footer > .account > h4 {
+    color: rgb(51, 51, 51);
+    margin: 10px 5px;
+}
+#footer > .account > a {
+    color: rgb(51, 51, 51);
+    margin: 5px;
+    text-decoration: none;
+}
+#footer > .account > a:hover {
+    color: black;
+    font-weight: 500;
+}
+#footer > .install-app > h4{
+    margin: 10px 1px;
+}
+#footer > .install-app > .store > img {
+    margin-bottom: 10px;
+    height: 40px;
+    width: 140px;
+    border-radius: 10px;
+}
+#footer > .install-app > .store > img:hover {
+    outline: 2px solid black;
+    cursor: pointer;
+}
+#footer > .install-app > .payment> img {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+}
+#footer > .install-app > .payment> img:hover {
+    outline: 1px solid black;
+    cursor: pointer;
+}
+#footer > div > a {
+    margin: 15px 0;
+}
+#footer > div > h4 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+#footer > .last {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+@media (max-width: 799px) {
+    #hero {
+        padding-left: 20px;
+    }
+    #header > .buttons {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        border: none;
+    }
+    #header > .buttons:hover {
+        color: aqua;
+        outline: 1px solid red;
+    }
+    #header > .buttons > .cancel {
+        display: none;   
+    }
+    #navigator {
+        padding: 25px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background-color: darkgrey;
+        width: 30%;
+        height: 100vh;
+        transition-duration: .3s;
+    }
+    #navigator > li {
+        margin: 20px 0;   
+    }
+    
+    #hero {
+        height: 70vh;
+        width: 100%;
+        background-position: 80% 50%;
+        }
+    
+    #features {
+        justify-content: center;
+        width: 90%;
+        margin: 10px 30px;
+    }
+    
+    #features > div {
+        margin: 15px;
+    }
+    
+    #product > .container {
+        justify-content: center;
+    }
+    
+    #banners {
+        padding: 30px 50px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    #banners > .row1 {
+        height: auto;
+        grid-column: 1/7;
+        background-position: right 50%;
+        
+    }
+    #banners > .banner-1 {
+        grid-row: 1;
+        
+    }
+    #banners > .banner-2 {
+        grid-row: 2;
+    }
+    #banners > .row2 {
+        grid-row: 3;
+        background-position: right 50%;
+    }
+    #banners > .banner-3 {
+        grid-column: 1/3;
+    }
+    #banners > .banner-4 {
+        grid-column: 3/5
+    }
+    #banners > .banner-5 {
+        grid-column: 5/7
+    }
+    #newsletter {
+        text-align: center;
+        height: 15vh;
+    }
+
+    #newsletter > .sign-up {
+        font-size: 13px;
+        bottom: 15px;
+        left: 10%;
+    }
+    #newsletter > .sign-up > input {
+        width: 40%;
+    }
+    #newsletter > h2 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #header > a > img {
+        width:  45px;
+    }
+    #header > .buttons {
+        font-size: 10px;
+    }
+    #navigator > li > a {
+        font-size: 13px;
+    }
+    #navigator > li {
+        margin: 10px 0;
+    }
+    #hero {
+        padding-left: 20px;
+    }
+    #hero > div > h4 {
+        width: 250px;
+    }
+    #features {
+        justify-content: center;
+    }
+    #banner {
+        width: 100%;
+        height: 25%;
+        background-position: right 45%;
+    }
+    #banner > h2 {
+        text-align: center;
+        width: 280px;
+        line-height: 30px;
+        font-size: 25px;
+    }
+    #banner > button {
+        margin: 20px 0;
+        font-size: 10px;
+    }
+    #banners {
+        margin: 0px;
+        padding: 5px;
+    }
+    #banners > .banner-1 {
+        height: 100%;
+    }
+    #banners > .row1 > h3 {
+        margin: 5px;
+    }
+    #banners > .row1 > h2 {
+        margin: 5px;
+    }
+    #banners > div > button {
+        width: 35%;
+    }
+    
+    #banners > .row2 > h3 {
+        color: green;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #banners > .row2 > h2 {
+        margin: 5px;
+    }
+    
+    #banners > .banner-5 {
+        background-position: right;
+    }
+    
+    #newsletter {
+        padding: 10px 5px;
+    }
+    #newsletter > h2 {
+        margin: 5px;
+    }
+    #newsletter > .sign-up {
+        font-size: 10px;
+        bottom: 10px;
+    }
+    #footer {
+        margin: 20px 0 0 0 ;
+        row-gap: 30px;
+    }
+    #footer > .contact {
+        width: 250px;
+    }
+    #footer > div > h4 {
+        margin: 10px 0;
+    }
+    #footer > .about {
+        margin-top: 20px;
+    }
+    
+}
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
